@@ -1,3 +1,6 @@
+<!-- This was my first attempt at getting data from an API and displaying it onto a web page
+Also the first time using "data" attributes(?) in the HTML file to link into JS -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,12 +9,14 @@
     <title>Check the weather</title>
   </head>
   <link rel="stylesheet" href="weatherapp.css" />
-  <body>
+  <body class="blurred">
     <header class="header">
       <div class="header-left">
-        <img class="weather-icon large" src="/WeatherApp/public/sun-solid.svg" data-current-icon=/>
-        <div class="header-current-temp"><span data-current-temp>31</span>&deg;</div>
-        
+        <img class="weather-icon large" src="/WeatherApp/public/sun-solid.svg"
+        data-current-icon=/>
+        <div class="header-current-temp">
+          <span data-current-temp>31</span>&deg;
+        </div>
       </div>
       <div class="header-right">
         <div class="info-group">
@@ -23,8 +28,11 @@
           <div><span data-current-fl-high>32</span>&deg;</div>
         </div>
         <div class="info-group">
-          <div class="label">WND</div>
-          <div><span data-current-wind>32</span><span class="value-sub-info">mph</span></div>
+          <div class="label">WiND</div>
+          <div>
+            <span data-current-wind>32</span
+            ><span class="value-sub-info">mph</span>
+          </div>
         </div>
         <div class="info-group">
           <div class="label">Low</div>
@@ -36,10 +44,628 @@
         </div>
         <div class="info-group">
           <div class="label">Precip</div>
-          <div><span data-current-precip >0.1</span><span class="value-sub-info">in</span></div>
+          <div>
+            <span data-current-precip>0.1</span
+            ><span class="value-sub-info">in</span>
+          </div>
         </div>
       </div>
     </header>
+
+    <section class="day-section" data-day-section>
+      <div class="day-card">
+        <img
+          src="/WeatherApp/public/cloud-sun-solid.svg"
+          class="weather-icon"
+        />
+        <div class="day-card-day">Monday</div>
+        <div>32&deg;</div>
+      </div>
+      <div class="day-card">
+        <img
+          src="/WeatherApp/public/cloud-sun-solid.svg"
+          class="weather-icon"
+        />
+        <div class="day-card-day">Tuesday</div>
+        <div>32&deg;</div>
+      </div>
+      <div class="day-card">
+        <img
+          src="/WeatherApp/public/cloud-sun-solid.svg"
+          class="weather-icon"
+        />
+        <div class="day-card-day">Wednesday</div>
+        <div>32&deg;</div>
+      </div>
+      <div class="day-card">
+        <img
+          src="/WeatherApp/public/cloud-sun-solid.svg"
+          class="weather-icon"
+        />
+        <div class="day-card-day">Thursday</div>
+        <div>32&deg;</div>
+      </div>
+      <div class="day-card">
+        <img
+          src="/WeatherApp/public/cloud-sun-solid.svg"
+          class="weather-icon"
+        />
+        <div class="day-card-day">Friday</div>
+        <div>32&deg;</div>
+      </div>
+      <div class="day-card">
+        <img
+          src="/WeatherApp/public/cloud-sun-solid.svg"
+          class="weather-icon"
+        />
+        <div class="day-card-day">Saturday</div>
+        <div>32&deg;</div>
+      </div>
+      <div class="day-card">
+        <img
+          src="/WeatherApp/public/cloud-sun-solid.svg"
+          class="weather-icon"
+        />
+        <div class="day-card-day">Sunday</div>
+        <div>32&deg;</div>
+      </div>
+    </section>
+
+    <table class="hour-section">
+      <tbody data-hour-selection>
+        <tr class="hour-row">
+          <td>
+            <div class="info-group">
+              <div class="label">Thursday</div>
+              <div>3 PM</div>
+            </div>
+          </td>
+          <td>
+            <img
+              src="/WeatherApp/public/bolt-lightning-solid.svg"
+              alt=""
+              class="weather-icon"
+            />
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Temp</div>
+              <div>32&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">FL temp</div>
+              <div>31&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Wind</div>
+              <div>32<span class="value-sub-info">mph</span></div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Precip</div>
+              <div>0.1<span class="value-sub-info">in</span></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="hour-row">
+          <td>
+            <div class="info-group">
+              <div class="label">Thursday</div>
+              <div>3 PM</div>
+            </div>
+          </td>
+          <td>
+            <img
+              src="/WeatherApp/public/bolt-lightning-solid.svg"
+              alt=""
+              class="weather-icon"
+            />
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Temp</div>
+              <div>32&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">FL temp</div>
+              <div>31&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Wind</div>
+              <div>32<span class="value-sub-info">mph</span></div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Precip</div>
+              <div>0.1<span class="value-sub-info">in</span></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="hour-row">
+          <td>
+            <div class="info-group">
+              <div class="label">Thursday</div>
+              <div>3 PM</div>
+            </div>
+          </td>
+          <td>
+            <img
+              src="/WeatherApp/public/bolt-lightning-solid.svg"
+              alt=""
+              class="weather-icon"
+            />
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Temp</div>
+              <div>32&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">FL temp</div>
+              <div>31&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Wind</div>
+              <div>32<span class="value-sub-info">mph</span></div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Precip</div>
+              <div>0.1<span class="value-sub-info">in</span></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="hour-row">
+          <td>
+            <div class="info-group">
+              <div class="label">Thursday</div>
+              <div>3 PM</div>
+            </div>
+          </td>
+          <td>
+            <img
+              src="/WeatherApp/public/bolt-lightning-solid.svg"
+              alt=""
+              class="weather-icon"
+            />
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Temp</div>
+              <div>32&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">FL temp</div>
+              <div>31&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Wind</div>
+              <div>32<span class="value-sub-info">mph</span></div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Precip</div>
+              <div>0.1<span class="value-sub-info">in</span></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="hour-row">
+          <td>
+            <div class="info-group">
+              <div class="label">Thursday</div>
+              <div>3 PM</div>
+            </div>
+          </td>
+          <td>
+            <img
+              src="/WeatherApp/public/bolt-lightning-solid.svg"
+              alt=""
+              class="weather-icon"
+            />
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Temp</div>
+              <div>32&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">FL temp</div>
+              <div>31&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Wind</div>
+              <div>32<span class="value-sub-info">mph</span></div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Precip</div>
+              <div>0.1<span class="value-sub-info">in</span></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="hour-row">
+          <td>
+            <div class="info-group">
+              <div class="label">Thursday</div>
+              <div>3 PM</div>
+            </div>
+          </td>
+          <td>
+            <img
+              src="/WeatherApp/public/bolt-lightning-solid.svg"
+              alt=""
+              class="weather-icon"
+            />
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Temp</div>
+              <div>32&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">FL temp</div>
+              <div>31&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Wind</div>
+              <div>32<span class="value-sub-info">mph</span></div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Precip</div>
+              <div>0.1<span class="value-sub-info">in</span></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="hour-row">
+          <td>
+            <div class="info-group">
+              <div class="label">Thursday</div>
+              <div>3 PM</div>
+            </div>
+          </td>
+          <td>
+            <img
+              src="/WeatherApp/public/bolt-lightning-solid.svg"
+              alt=""
+              class="weather-icon"
+            />
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Temp</div>
+              <div>32&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">FL temp</div>
+              <div>31&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Wind</div>
+              <div>32<span class="value-sub-info">mph</span></div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Precip</div>
+              <div>0.1<span class="value-sub-info">in</span></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="hour-row">
+          <td>
+            <div class="info-group">
+              <div class="label">Thursday</div>
+              <div>3 PM</div>
+            </div>
+          </td>
+          <td>
+            <img
+              src="/WeatherApp/public/bolt-lightning-solid.svg"
+              alt=""
+              class="weather-icon"
+            />
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Temp</div>
+              <div>32&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">FL temp</div>
+              <div>31&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Wind</div>
+              <div>32<span class="value-sub-info">mph</span></div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Precip</div>
+              <div>0.1<span class="value-sub-info">in</span></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="hour-row">
+          <td>
+            <div class="info-group">
+              <div class="label">Thursday</div>
+              <div>3 PM</div>
+            </div>
+          </td>
+          <td>
+            <img
+              src="/WeatherApp/public/bolt-lightning-solid.svg"
+              alt=""
+              class="weather-icon"
+            />
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Temp</div>
+              <div>32&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">FL temp</div>
+              <div>31&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Wind</div>
+              <div>32<span class="value-sub-info">mph</span></div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Precip</div>
+              <div>0.1<span class="value-sub-info">in</span></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="hour-row">
+          <td>
+            <div class="info-group">
+              <div class="label">Thursday</div>
+              <div>3 PM</div>
+            </div>
+          </td>
+          <td>
+            <img
+              src="/WeatherApp/public/bolt-lightning-solid.svg"
+              alt=""
+              class="weather-icon"
+            />
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Temp</div>
+              <div>32&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">FL temp</div>
+              <div>31&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Wind</div>
+              <div>32<span class="value-sub-info">mph</span></div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Precip</div>
+              <div>0.1<span class="value-sub-info">in</span></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="hour-row">
+          <td>
+            <div class="info-group">
+              <div class="label">Thursday</div>
+              <div>3 PM</div>
+            </div>
+          </td>
+          <td>
+            <img
+              src="/WeatherApp/public/bolt-lightning-solid.svg"
+              alt=""
+              class="weather-icon"
+            />
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Temp</div>
+              <div>32&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">FL temp</div>
+              <div>31&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Wind</div>
+              <div>32<span class="value-sub-info">mph</span></div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Precip</div>
+              <div>0.1<span class="value-sub-info">in</span></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="hour-row">
+          <td>
+            <div class="info-group">
+              <div class="label">Thursday</div>
+              <div>3 PM</div>
+            </div>
+          </td>
+          <td>
+            <img
+              src="/WeatherApp/public/bolt-lightning-solid.svg"
+              alt=""
+              class="weather-icon"
+            />
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Temp</div>
+              <div>32&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">FL temp</div>
+              <div>31&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Wind</div>
+              <div>32<span class="value-sub-info">mph</span></div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Precip</div>
+              <div>0.1<span class="value-sub-info">in</span></div>
+            </div>
+          </td>
+        </tr>
+        <tr class="hour-row">
+          <td>
+            <div class="info-group">
+              <div class="label">Thursday</div>
+              <div>3 PM</div>
+            </div>
+          </td>
+          <td>
+            <img
+              src="/WeatherApp/public/bolt-lightning-solid.svg"
+              alt=""
+              class="weather-icon"
+            />
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Temp</div>
+              <div>32&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">FL temp</div>
+              <div>31&deg;</div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Wind</div>
+              <div>32<span class="value-sub-info">mph</span></div>
+            </div>
+          </td>
+          <td>
+            <div class="info-group">
+              <div class="label">Precip</div>
+              <div>0.1<span class="value-sub-info">in</span></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <template id="day-card-template"
+      ><div class="day-card">
+        <img data-icon class="weather-icon" />
+        <div class="day-card-day" data-day></div>
+        <div><span data-temp></span><span>&deg;</span></div>
+      </div></template
+    >
+    <template id="hour-row-template"
+      ><tr class="hour-row">
+        <td>
+          <div class="info-group">
+            <div class="label" data-day></div>
+            <div data-time></div>
+          </div>
+        </td>
+        <td><img data-icon alt="" class="weather-icon" /></td>
+        <td>
+          <div class="info-group">
+            <div class="label">Temp</div>
+            <div><span data-temp></span><span>&deg;</span></div>
+          </div>
+        </td>
+        <td>
+          <div class="info-group">
+            <div class="label">FL temp</div>
+            <div><span data-fl-temp></span><span>&deg;</span></div>
+          </div>
+        </td>
+        <td>
+          <div class="info-group">
+            <div class="label">Wind</div>
+            <div><span data-wind></span><span class="value-sub-info">mph</span></div>
+          </div>
+        </td>
+        <td>
+          <div class="info-group">
+            <div class="label">Precip</div>
+            <div><span data-precip></span><span class="value-sub-info">in</span></div>
+          </div>
+        </td>
+      </tr></template
+    >
+
     <script type="module" src="weatherapp.js"></script>
   </body>
 </html>
